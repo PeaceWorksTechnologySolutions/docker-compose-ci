@@ -3,7 +3,7 @@ FROM tmaier/docker-compose:${DOCKER_VERSION}
 
 ARG COMPOSE_VERSION=
 
-RUN apk add --no-cache bash \
+RUN apk add --no-cache bash git openssh rsync \
  && sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd \
  && rm /bin/sh \
  && ln -s /bin/bash /bin/sh
