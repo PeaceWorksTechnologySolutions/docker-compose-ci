@@ -3,8 +3,8 @@
 This docker image installs docker-compose on top of the `docker` image, and uses bash as the default shell.
 This is very useful for CI pipelines, which leverage "Docker in Docker".
 
-This image is built using [tmaier/docker-compose](https://github.com/tmaier/docker-compose), and adds bash
-as the default shell (upstream did not want to make that change).
+This image is built using the offical docker image as base, adds bash
+as the default shell and installs these tools: git rsync jq curl
 
 ## Usage instructions for GitLab CI
 

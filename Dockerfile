@@ -1,7 +1,5 @@
 ARG DOCKER_VERSION=latest
-FROM tmaier/docker-compose:${DOCKER_VERSION}
-
-ARG COMPOSE_VERSION=
+FROM docker:${DOCKER_VERSION}
 
 RUN apk update && apk upgrade openssh && apk add --no-cache bash git rsync jq curl \
  && sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd \

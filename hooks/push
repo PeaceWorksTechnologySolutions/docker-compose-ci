@@ -2,7 +2,7 @@
 
 set -ex
 
-while read -r docker_version _;
+while read -r docker_version;
 do
   image=${DOCKER_REPO}:${docker_version}
   echo "# Pushing image ${image}..."
